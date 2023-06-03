@@ -19,11 +19,13 @@
 .about__me__image{
     border-radius: 2rem;
     overflow: hidden;
-    transform: rotate(10deg);
-    transition: var(--transition);
+    /*transform: rotate(10deg);
+    transition: var(--transition); 
+    */
 }
 
-.about__me__image:hover{
+
+/*.about__me__image:hover{
     transform:rotate(0);
 }
 
@@ -32,7 +34,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
-
+*/
 .about__card{
     background: var(--color-bg-variant);
     border: 1px solid transparent;

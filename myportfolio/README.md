@@ -1,9 +1,4 @@
-KAH JOSPEN NGUM
-FE21A2O7
 # Getting Started with Create React App
-# Improved on EXperience  and About me
-# Added the Nav bar and the Footer
-# Added the contact me,services and changed the view of the portfolio, with the colors.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

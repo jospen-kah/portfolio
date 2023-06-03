@@ -1,29 +1,58 @@
-import React from "react";
-import "./experience.css";
- 
+import React from 'react'
+import './experience.css'
+import { BsPatchCheckFill} from 'react-icons/bs'
 
-export const Experience = () => {
+const experience = () => {
   return (
     <section id="experience">
-      <h5>What skills i have</h5>
+      <h5>The skills I have</h5>
       <h2>My Experience</h2>
-      <div className="container experience__container">
-       <div class="list">
-        <ul type=".">Programming
-          <li>c programming</li>
-          <li>c++ programming</li>
-          <li>java programming</li>
-        </ul>
-       </div>
-       <div class="list">
-        <ul type=".">Web Development
-          <li>c Html</li>
-          <li>CSS</li>
-          <li>React</li>
-        </ul>
-       </div>
+
+      <div className='container experience__container'>
+        <div className='experience_frontend'>
+          <h3>Frontend Development</h3>
+          <div className='experience__content'>
+            <article className='experience__details'>
+              <BsPatchCheckFill className='experience__details__icon' />
+              <div><h4>HTML</h4>
+              <small className='text-light'>Experienced</small></div>
+            </article>
+            <article className='experience__details'>
+              <BsPatchCheckFill className='experience__details__icon' />
+              <div><h4>CSS</h4>
+              <small className='text-light'>Experienced</small></div>
+            </article>
+            <article className='experience__details'>
+              <BsPatchCheckFill className='experience__details__icon' />
+              <div><h4>JAVASCRIPT</h4>
+              <small className='text-light'>Intermediate</small></div>
+            </article>
+          </div>
+        </div>
+        <div className='experience_programming'>
+          <h3>Programming</h3>
+          <div className='experience__content'>
+            <article className='experience__details'>
+              <BsPatchCheckFill className='experience__details__icon' />
+              <div><h4>C</h4>
+              <small className='text-light'>Experienced</small></div>
+            </article>
+            <article className='experience__details'>
+              <BsPatchCheckFill className='experience__details__icon' />
+              <div><h4>C++</h4>
+              <small className='text-light'>Experienced</small></div>
+            </article>
+            <article className='experience__details'>
+              <BsPatchCheckFill className='experience__details__icon' />
+              <div><h4>Java</h4>
+              <small className='text-light'>Intermediate</small></div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
-  );
-};
-export default Experience;
+  )
+}
+
+
+export default experience
