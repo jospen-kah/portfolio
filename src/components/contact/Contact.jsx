@@ -27,22 +27,22 @@ return (
 <MdOutlineEmail className='contact__option__icon'/>
 <h4>Email</h4>
 <h5>myEmail@gmail.com</h5>
-<a href='mailto:ngumkahjospen@gmail.com'>send a
+<a href='mailto:ngumkahjospen@gmail.com' rel="noreferrer" target='_blank'>send a
 message</a>
 </article>
 <article className='contact__option'>
 <AiOutlineLinkedin className='contact__option__icon'/>
 <h4>LinkedIn</h4>
 <h5>Profile</h5>
-<a href='https://www.linkedin.com/in/kah-jospen-ngum-9a5501270'
->Tape me on LinkedIn</a>
+<a href='https://www.linkedin.com/in/kah-jospen-ngum-9a5501270'rel="noreferrer" target='_blank'
+>Tape me on LinkedIn </a>
 </article>
 <article className='contact__option'>
 <BsWhatsapp className='contact__option__icon'/>
 <h4>Whatsapp</h4>
 <h5>Direct message</h5>
 <a href='https://web.whatsapp.com/send?phone=+237651335128'
->Whatsapp me</a>
+rel="noreferrer" target='_blank'>Whatsapp me</a>
 </article>
 </div>
 <form ref={form} onSubmit={sendEmail}>

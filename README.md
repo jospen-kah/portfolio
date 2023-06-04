@@ -4,8 +4,10 @@ FE21A2O7
 # Improved on EXperience  and About me
 # Added the Nav bar and the Footer
 # Added the contact me,services and changed the view of the portfolio, with the colors.
+# Added a live demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-re
+act-app).
 
 ## Available Scripts
 
@@ -31,7 +33,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
+ 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
