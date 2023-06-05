@@ -1,4 +1,6 @@
 import React from 'react'
+import emailjs from '@emailjs/browser'
+
 import './contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {AiOutlineLinkedin} from 'react-icons/ai'
@@ -7,16 +9,20 @@ import {useRef} from 'react'
 
 const Contact = () => {
 const form = useRef();
+
 const sendEmail = (e) => {
 e.preventDefault();
 
-e.target.reset()
+emailjs.sendForm('service_r807pxd', 'template_wslq2kq', form.current, '6wMmBOPnFssPX1WX9')
 .then((result) => {
-console.log(result.text)
-},(error) =>{
-console.log(error.text);
+    console.log(result.text);
+    console.log("message sent ")
+}, (error) => {
+    console.log(error.text);
 });
 };
+
+
 return (
 <section id="contact">
 <h5>Get in touch</h5>
@@ -26,8 +32,8 @@ return (
 <article className='contact__option'>
 <MdOutlineEmail className='contact__option__icon'/>
 <h4>Email</h4>
-<h5>myEmail@gmail.com</h5>
-<a href='mailto:ngumkahjospen@gmail.com' rel="noreferrer" target='_blank'>send a
+<h5>jospenngumk@gmail.com</h5>
+<a href='mailto:jospenngumk@gmail.com' rel="noreferrer" target='_blank'>send a
 message</a>
 </article>
 <article className='contact__option'>
@@ -46,8 +52,8 @@ rel="noreferrer" target='_blank'>Whatsapp me</a>
 </article>
 </div>
 <form ref={form} onSubmit={sendEmail}>
-<input type="text" name='name' placeholder='full name' required/>
-<input type="email" name='email' placeholder='your email' required/>
+<input type="text" name='Full name' placeholder='Full name' required/>
+<input type="email" name='Email' placeholder='Email' required/>
 <textarea name="message" id="message" cols="30" rows="10"
 placeholder='your message' required></textarea>
 <button type="submit" className='btn btn-primary'>send message</button>
