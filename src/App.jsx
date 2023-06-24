@@ -18,11 +18,11 @@ return (
 <Navbar/>
 <About/>
 <Experience/>
-<Services/>
-<Portfolio/>
-<Testimonial/>
-<Contact/>
-<Footer/>
+<Services/> 
+ <Portfolio/> 
+{<Testimonial/>}
+ <Contact/>
+<Footer/> 
 </>
 );
 }

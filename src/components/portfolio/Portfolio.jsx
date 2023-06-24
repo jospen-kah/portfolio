@@ -1,29 +1,45 @@
-import React from 'react'
-import './portfolio.css'
-import IMG1 from '../../assets/kah.jpg'
+import React, {useEffect, useState} from "react";
+import axios from 'axios';
+import "./portfolio.css";
 
-const Portfolio = () => {
-  return (
-    <section id= "portfolio">
-      <h5>My recent work</h5>
-      <h2>Portfolio</h2>
-      
-      <div className='container portfolio__container'>
+export const Portfolio = () => {
 
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'>
-            <img src={IMG1} alt='portfolio'/>
-          </div>
-          <h3>My Portfolio</h3>
-          <div className='portfolio__item-cta'>
-          <a href='https://github.com/jospen-kah/portfolio' className='btn' target='_blank' rel="noreferrer">Github</a>
-          <a href='https://jospenportfolio.netlify.app/' className='btn btn-primary'target='_blank' rel="noreferrer">Live Demo</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  )
-}
+    const [data, setData] = useState([]);
 
+    useEffect(() => {
+        axios.get("https://jospen.cyclic.app/api/portfolio").then(response => {
+            const formattedData = response.data.data.map(item => ({
+                id: item._id,
+                image: item.image,
+                title: item.title,
+                github: item.github,
+                demo: item.demo
+            }));
+            setData(formattedData);
+        }).catch(error => {
+            console.log("Error fetching portfolio data:", error);
+        })
+    }, [])
 
-export default Portfolio
+    return (
+        <section id="portfolio">
+            <h5>My Recent Work</h5>
+            <h2>Portfolio</h2>
+            <div className="container portfolio__container">
+                {data.map(({ id, image, title, github, demo }) => (
+                    <article key={id} className="portfolio__item">
+                        <div className="portfolio__item__image">
+                            <img src={image} alt={title} className="portImage"/>
+                        </div>
+                        <h3>{title}</h3>
+                        <div className="portfolio__item__cta">
+                            <a href={github} className="btn" target="_blank" rel="nopoener noreferrer">GitHub</a>
+                            <a href={demo} className="btn btn-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </section>
+    );
+};
+export default Portfolio;
